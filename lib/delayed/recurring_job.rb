@@ -110,7 +110,7 @@ module Delayed
     end
 
     def next_future_time(times)
-      times.select{|time| time > Time.now}.min
+      times.select{|time| time > Time.current}.min
     end
 
     module ClassMethods
